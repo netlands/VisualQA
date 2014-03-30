@@ -1,0 +1,7 @@
+﻿# regular_expression	case_sensitive	color
+Document	TRUE	Cyan
+html	FALSE	Lime
+<span class="ui">([^<]+?)</span>	FALSE	MediumSpringGreen
+<span class="key">([^<]+?)</span>	FALSE	LightSkyBlue
+<span class="ui[^"]*?">([^<]+?)</span>	FALSE	Cyan
+<span class="(?:os_ui|other_ui)">([^<]+?)</span>	FALSE	LightGray 

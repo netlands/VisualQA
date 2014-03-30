@@ -1,0 +1,1 @@
+C:\Windows\Microsoft.NET\Framework\v3.5\MSBuild visualQA.sln /m /p:Configuration=Release

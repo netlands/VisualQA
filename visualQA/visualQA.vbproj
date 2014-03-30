@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>visualqa</RootNamespace>
+    <AssemblyName>VisualQA</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <MyType>WindowsForms</MyType>
+    <ProjectGuid>{CF009C8A-6699-4A8B-A4BC-BE6DC35E6CFE}</ProjectGuid>
+    <ApplicationIcon>art\visualQA.ico</ApplicationIcon>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\bergb\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionInfer>Off</OptionInfer>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AnnotateBox\AnnotateBox\AnnotateBox.Designer.vb">
+      <Link>AnnotateBox.Designer.vb</Link>
+      <DependentUpon>AnnotateBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="..\AnnotateBox\AnnotateBox\AnnotateBox.vb">
+      <Link>AnnotateBox.vb</Link>
+    </Compile>
+    <EmbeddedResource Include="..\AnnotateBox\AnnotateBox\AnnotateBox.resx">
+      <Link>AnnotateBox.resx</Link>
+      <DependentUpon>AnnotateBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Compile Include="MouseGestureFilter.vb" />
+    <Compile Include="SimpleEditorForm.Designer.vb">
+      <DependentUpon>SimpleEditorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleEditorForm.vb" />
+    <Compile Include="TextBoxMarginColourPainter.vb" />
+    <Compile Include="TextBoxMarginCustomise.vb" />
+    <EmbeddedResource Include="SimpleEditorForm.resx">
+      <DependentUpon>SimpleEditorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\xhtml-attribs-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-base-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-bdo-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-blkphras-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-blkpres-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-blkstruct-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-charent-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-csismap-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-datatypes-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-edit-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-events-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-form-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-framework-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-hypertext-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-image-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-inlphras-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-inlpres-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-inlstruct-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-inlstyle-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-lat1.ent" />
+    <EmbeddedResource Include="Resources\xhtml-lat11.ent" />
+    <EmbeddedResource Include="Resources\xhtml-link-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-list-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-meta-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-object-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-param-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-pres-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-qname-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-ruby-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-script-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-special.ent" />
+    <EmbeddedResource Include="Resources\xhtml-special11.ent" />
+    <EmbeddedResource Include="Resources\xhtml-ssismap-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-struct-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-style-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-symbol.ent" />
+    <EmbeddedResource Include="Resources\xhtml-symbol11.ent" />
+    <EmbeddedResource Include="Resources\xhtml-table-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml-text-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml.soc" />
+    <EmbeddedResource Include="Resources\xhtml1-frameset.dtd" />
+    <EmbeddedResource Include="Resources\xhtml1-strict.dtd" />
+    <EmbeddedResource Include="Resources\xhtml1-transitional.dtd" />
+    <EmbeddedResource Include="Resources\xhtml1.dcl" />
+    <EmbeddedResource Include="Resources\xhtml11-model-1.mod" />
+    <EmbeddedResource Include="Resources\xhtml11.dtd" />
+    <None Include="about.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\frameset.dtd" />
+    <EmbeddedResource Include="Resources\HTMLlat1.ent" />
+    <EmbeddedResource Include="Resources\HTMLspecial.ent" />
+    <EmbeddedResource Include="Resources\HTMLsymbol.ent" />
+    <EmbeddedResource Include="Resources\loose.dtd" />
+    <EmbeddedResource Include="Resources\strict.dtd" />
+    <None Include="source.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="target.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Folder Include="PlugIns" />
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.vb">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="AssemblyInfo.vb" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ProjectSettingForm.Designer.vb">
+      <DependentUpon>ProjectSettingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSettingForm.vb" />
+    <EmbeddedResource Include="ProjectSettingForm.resx">
+      <DependentUpon>ProjectSettingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ValidateXMLClass.vb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+</Project>
