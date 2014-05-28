@@ -1,4 +1,4 @@
-﻿' plug-in component for Canon IJ specific functionallity
+﻿' plug-in component for project specific functionallity
 '
 ' name of the file indicates the pluginname (no spaces or underscores)
 ' followed by a single underscore and the extension or filetype
@@ -8,20 +8,20 @@
 Imports visualqa.MainForm
 Imports System.IO
 
-Public Class canon_html
+Public Class project_specific_html
 	Implements VisualQAPlugIn
 	
 	Dim private _extensions As String = "html"
 
  	Public ReadOnly Property Name() As String Implements VisualQAPlugIn.Name
         Get
-			Return "Canon IJ XHTML"
+			Return "Project Specific"
         End Get
     End Property	
 	
  	Public ReadOnly Property Description() As String Implements VisualQAPlugIn.Description
         Get
-			Return "Canon IJ XHTML Specific Functionality"
+			Return "Project Specific Functionality"
         End Get
     End Property
 	
