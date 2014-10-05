@@ -10,7 +10,7 @@
     <AssemblyName>AnnotateScreenArea</AssemblyName>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\bergb\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>..\..\..\process_icon\capture-0.ico</ApplicationIcon>
     <TargetFrameworkProfile />
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <NoWin32Manifest>False</NoWin32Manifest>

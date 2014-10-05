@@ -33,26 +33,26 @@ Partial Class MainForm
 	''' not be able to load this method if it was changed manually.
 	''' </summary>
 	Private Sub InitializeComponent()
-		Me.components = New System.ComponentModel.Container
+		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-		Me.panel1 = New System.Windows.Forms.Panel
-		Me.panel3 = New System.Windows.Forms.Panel
-		Me.label1 = New System.Windows.Forms.Label
-		Me.annotateBox1 = New AnnotateScreenArea.AnnotateBox
-		Me.button1 = New System.Windows.Forms.Button
-		Me.panel2 = New System.Windows.Forms.Panel
+		Me.panel1 = New System.Windows.Forms.Panel()
+		Me.panel3 = New System.Windows.Forms.Panel()
+		Me.label1 = New System.Windows.Forms.Label()
+		Me.annotateBox1 = New AnnotateScreenArea.AnnotateBox()
+		Me.button1 = New System.Windows.Forms.Button()
+		Me.panel2 = New System.Windows.Forms.Panel()
 		Me.contextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-		Me.selectDestinationFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.transparantToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.resetAreaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.resetCounterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
-		Me.autoSaveOnUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.autoUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
-		Me.autoNumberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-		Me.textBox1 = New System.Windows.Forms.TextBox
-		Me.button2 = New System.Windows.Forms.Button
+		Me.selectDestinationFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.transparantToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.resetAreaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.resetCounterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+		Me.autoSaveOnUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.autoUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+		Me.autoNumberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.textBox1 = New System.Windows.Forms.TextBox()
+		Me.button2 = New System.Windows.Forms.Button()
 		Me.timer1 = New System.Windows.Forms.Timer(Me.components)
 		Me.contextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
 		Me.panel1.SuspendLayout
@@ -254,8 +254,8 @@ Partial Class MainForm
 		Me.TopMost = true
 		Me.TransparencyKey = System.Drawing.Color.Magenta
 		AddHandler DragDrop, AddressOf Me.MainFormDragDrop
-		AddHandler Resize, AddressOf Me.MainFormResize
 		AddHandler DragOver, AddressOf Me.MainFormDragOver
+		AddHandler Resize, AddressOf Me.MainFormResize
 		Me.panel1.ResumeLayout(false)
 		Me.panel2.ResumeLayout(false)
 		Me.panel2.PerformLayout
