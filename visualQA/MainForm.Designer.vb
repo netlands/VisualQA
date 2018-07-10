@@ -201,6 +201,7 @@ Partial Class MainForm
 		Me.toolStripMenuItemSize1 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.toolStripMenuItemSize2 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.toolStripMenuItemSize3 = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripMenuItemSize4 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.toolStripSeparator26 = New System.Windows.Forms.ToolStripSeparator()
 		Me.excludeScrollbarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.showBrowserWidthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -224,6 +225,7 @@ Partial Class MainForm
 		Me.IE9ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.IE10ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.IE11ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.IE12ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.toolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
 		Me.synchronizedScrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.defaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -278,7 +280,6 @@ Partial Class MainForm
 		Me.imageList2 = New System.Windows.Forms.ImageList(Me.components)
 		Me.colorDialog1 = New System.Windows.Forms.ColorDialog()
 		Me.startAnnotate = New System.Windows.Forms.Timer(Me.components)
-		Me.toolStripMenuItemSize4 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.panel2.SuspendLayout
 		Me.panel2Contents.SuspendLayout
 		CType(Me.pictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
@@ -618,7 +619,7 @@ Partial Class MainForm
 		'
 		Me.targetToolStripMenuItem.DropDown = Me.contextMenuStripInfo
 		Me.targetToolStripMenuItem.Name = "targetToolStripMenuItem"
-		Me.targetToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+		Me.targetToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
 		Me.targetToolStripMenuItem.Text = "Target"
 		AddHandler Me.targetToolStripMenuItem.DropDownOpening, AddressOf Me.TargetToolStripMenuItemClick
 		'
@@ -1782,7 +1783,7 @@ Partial Class MainForm
 		'
 		Me.toolsToolStripMenuItem.DropDown = Me.contextMenuStripTools
 		Me.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem"
-		Me.toolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+		Me.toolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
 		Me.toolsToolStripMenuItem.Text = "Tools"
 		'
 		'contextMenuStripTools
@@ -1924,6 +1925,13 @@ Partial Class MainForm
 		Me.toolStripMenuItemSize3.Text = "800"
 		AddHandler Me.toolStripMenuItemSize3.Click, AddressOf Me.ToolStripMenuItem10Click
 		'
+		'toolStripMenuItemSize4
+		'
+		Me.toolStripMenuItemSize4.Name = "toolStripMenuItemSize4"
+		Me.toolStripMenuItemSize4.Size = New System.Drawing.Size(162, 22)
+		Me.toolStripMenuItemSize4.Text = "1024"
+		AddHandler Me.toolStripMenuItemSize4.Click, AddressOf Me.ToolStripMenuItem10Click
+		'
 		'toolStripSeparator26
 		'
 		Me.toolStripSeparator26.Name = "toolStripSeparator26"
@@ -2048,7 +2056,7 @@ Partial Class MainForm
 		'
 		'modeToolStripMenuItem
 		'
-		Me.modeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IE7ToolStripMenuItem, Me.IE8ToolStripMenuItem, Me.IE9ToolStripMenuItem, Me.IE10ToolStripMenuItem, Me.IE11ToolStripMenuItem, Me.toolStripSeparator14, Me.synchronizedScrollToolStripMenuItem})
+		Me.modeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IE7ToolStripMenuItem, Me.IE8ToolStripMenuItem, Me.IE9ToolStripMenuItem, Me.IE10ToolStripMenuItem, Me.IE11ToolStripMenuItem, Me.IE12ToolStripMenuItem, Me.toolStripSeparator14, Me.synchronizedScrollToolStripMenuItem})
 		Me.modeToolStripMenuItem.Name = "modeToolStripMenuItem"
 		Me.modeToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
 		Me.modeToolStripMenuItem.Text = "Mode"
@@ -2090,6 +2098,13 @@ Partial Class MainForm
 		Me.IE11ToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
 		Me.IE11ToolStripMenuItem.Text = "IE11"
 		AddHandler Me.IE11ToolStripMenuItem.Click, AddressOf Me.changeIEmode
+		'
+		'IE12ToolStripMenuItem
+		'
+		Me.IE12ToolStripMenuItem.Name = "IE12ToolStripMenuItem"
+		Me.IE12ToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+		Me.IE12ToolStripMenuItem.Text = "IE12 (Edge)"
+		AddHandler Me.IE12ToolStripMenuItem.Click, AddressOf Me.changeIEmode
 		'
 		'toolStripSeparator14
 		'
@@ -2472,13 +2487,6 @@ Partial Class MainForm
 		'
 		AddHandler Me.startAnnotate.Tick, AddressOf Me.TimerAnnotateTick
 		'
-		'toolStripMenuItemSize4
-		'
-		Me.toolStripMenuItemSize4.Name = "toolStripMenuItemSize4"
-		Me.toolStripMenuItemSize4.Size = New System.Drawing.Size(162, 22)
-		Me.toolStripMenuItemSize4.Text = "1024"
-		AddHandler Me.toolStripMenuItemSize4.Click, AddressOf Me.ToolStripMenuItem10Click
-		'
 		'MainForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -2556,6 +2564,7 @@ Partial Class MainForm
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private IE12ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 	Private toolStripMenuItemSize4 As System.Windows.Forms.ToolStripMenuItem
 	Private IE11ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 	Private showBrowserWidthToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
