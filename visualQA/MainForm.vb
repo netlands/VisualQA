@@ -450,7 +450,6 @@ Public Partial Class MainForm
 						IE9ToolStripMenuItem.Visible = False
 						IE10ToolStripMenuItem.Visible = False
 						IE11ToolStripMenuItem.Visible = False
-						IE12ToolStripMenuItem.Visible = False						
 						toolStripSeparator14.Visible = False
 					Case 7
 						IE7ToolStripMenuItem.Visible = True
@@ -458,7 +457,6 @@ Public Partial Class MainForm
 						IE9ToolStripMenuItem.Visible = False
 						IE10ToolStripMenuItem.Visible = False
 						IE11ToolStripMenuItem.Visible = False
-						IE12ToolStripMenuItem.Visible = False						
 						toolStripSeparator14.Visible = True
 					Case 8
 						IE7ToolStripMenuItem.Visible = True
@@ -466,7 +464,6 @@ Public Partial Class MainForm
 						IE9ToolStripMenuItem.Visible = False
 						IE10ToolStripMenuItem.Visible = False
 						IE11ToolStripMenuItem.Visible = False
-						IE12ToolStripMenuItem.Visible = False						
 						toolStripSeparator14.Visible = True
 					Case 9
 						IE7ToolStripMenuItem.Visible = True
@@ -474,7 +471,6 @@ Public Partial Class MainForm
 						IE9ToolStripMenuItem.Visible = True
 						IE10ToolStripMenuItem.Visible = False
 						IE11ToolStripMenuItem.Visible = False
-						IE12ToolStripMenuItem.Visible = False						
 						toolStripSeparator14.Visible = True
 					Case 10
 						IE7ToolStripMenuItem.Visible = True
@@ -482,7 +478,6 @@ Public Partial Class MainForm
 						IE9ToolStripMenuItem.Visible = True
 						IE10ToolStripMenuItem.Visible = True
 						IE11ToolStripMenuItem.Visible = False
-						IE12ToolStripMenuItem.Visible = False						
 						toolStripSeparator14.Visible = True
 					Case 11
 						IE7ToolStripMenuItem.Visible = True
@@ -490,16 +485,7 @@ Public Partial Class MainForm
 						IE9ToolStripMenuItem.Visible = True
 						IE10ToolStripMenuItem.Visible = True
 						IE11ToolStripMenuItem.Visible = True
-						IE12ToolStripMenuItem.Visible = True ' False /* forced on */						
-						toolStripSeparator14.Visible = True
-					Case 12
-						IE7ToolStripMenuItem.Visible = True
-						IE8ToolStripMenuItem.Visible = True
-						IE9ToolStripMenuItem.Visible = True
-						IE10ToolStripMenuItem.Visible = True
-						IE11ToolStripMenuItem.Visible = True
-						IE12ToolStripMenuItem.Visible = True						
-						toolStripSeparator14.Visible = True							
+						toolStripSeparator14.Visible = True						
 				End Select
 				Catch ex As Exception
 					System.Diagnostics.debug.WriteLine("Problem getting maximum browser version")
@@ -5945,8 +5931,6 @@ End Sub
 			IE10ToolStripMenuItem.Image = Nothing
 			IE11ToolStripMenuItem.Checked = False
 			IE11ToolStripMenuItem.Image = Nothing
-			IE12ToolStripMenuItem.Checked = False
-			IE12ToolStripMenuItem.Image = Nothing			
 			setIEmode(7)
 		Else if _sender.Text = "IE8" Then
 			IE8ToolStripMenuItem.Checked = True
@@ -5959,8 +5943,6 @@ End Sub
 			IE10ToolStripMenuItem.Image = Nothing
 			IE11ToolStripMenuItem.Checked = False			
 			IE11ToolStripMenuItem.Image = Nothing
-			IE12ToolStripMenuItem.Checked = False
-			IE12ToolStripMenuItem.Image = Nothing			
 			setIEmode(8)
 		Else if _sender.Text = "IE9" Then
 			IE9ToolStripMenuItem.Checked = True
@@ -5973,8 +5955,6 @@ End Sub
 			IE10ToolStripMenuItem.Image = Nothing
 			IE11ToolStripMenuItem.Checked = False			
 			IE11ToolStripMenuItem.Image = Nothing
-			IE12ToolStripMenuItem.Checked = False
-			IE12ToolStripMenuItem.Image = Nothing			
 			setIEmode(9)
 		Else if _sender.Text = "IE10" Then
 			IE10ToolStripMenuItem.Checked = True
@@ -5986,9 +5966,7 @@ End Sub
 			IE9ToolStripMenuItem.Checked = False
 			IE9ToolStripMenuItem.Image = Nothing
 			IE11ToolStripMenuItem.Checked = False			
-			IE11ToolStripMenuItem.Image = Nothing
-			IE12ToolStripMenuItem.Checked = False
-			IE12ToolStripMenuItem.Image = Nothing			
+			IE11ToolStripMenuItem.Image = Nothing			
 			setIEmode(10)
 		Else if _sender.Text = "IE11" Then
 			IE11ToolStripMenuItem.Checked = True
@@ -6000,24 +5978,8 @@ End Sub
 			IE9ToolStripMenuItem.Checked = False
 			IE9ToolStripMenuItem.Image = Nothing
 			IE10ToolStripMenuItem.Checked = False			
-			IE10ToolStripMenuItem.Image = Nothing
-			IE12ToolStripMenuItem.Checked = False
-			IE12ToolStripMenuItem.Image = Nothing			
-			setIEmode(11)
-		Else if _sender.Text.StartsWith("IE12") Then
-			IE12ToolStripMenuItem.Checked = True
-			IE12ToolStripMenuItem.Image = imagelistsmallicons.Images.Item(13)
-			IE7ToolStripMenuItem.Checked = False
-			IE7ToolStripMenuItem.Image = Nothing
-			IE8ToolStripMenuItem.Checked = False
-			IE8ToolStripMenuItem.Image = Nothing
-			IE9ToolStripMenuItem.Checked = False
-			IE9ToolStripMenuItem.Image = Nothing
-			IE10ToolStripMenuItem.Checked = False			
-			IE10ToolStripMenuItem.Image = Nothing
-			IE11ToolStripMenuItem.Checked = False
-			IE11ToolStripMenuItem.Image = Nothing			
-			setIEmode(12)			
+			IE10ToolStripMenuItem.Image = Nothing			
+			setIEmode(11)			
 		End If
 	
 	End Sub
@@ -6054,7 +6016,6 @@ End Sub
 			ieMode = "IE" & val.ToString.Substring(0,1)
 			if ieMode = "IE1" then ieMode = "IE10"
 			If val.ToString.Substring(0,2) = "11" Then ieMode = "IE11"
-			If val.ToString.Substring(0,2) = "12" Then ieMode = "IE12"			
 			System.Diagnostics.Debug.WriteLine(ieMode & " Mode")
 		
 			If ieMode = "IE7" Then
@@ -6067,9 +6028,7 @@ End Sub
 				IE10ToolStripMenuItem.Checked = False
 				IE10ToolStripMenuItem.Image = Nothing
 				IE11ToolStripMenuItem.Checked = False
-				IE11ToolStripMenuItem.Image = Nothing
-				IE12ToolStripMenuItem.Checked = False
-				IE12ToolStripMenuItem.Image = Nothing				
+				IE11ToolStripMenuItem.Image = Nothing				
 			Else if ieMode = "IE8" Then
 				IE8ToolStripMenuItem.Checked = True
 				IE8ToolStripMenuItem.Image = imagelistsmallicons.Images.Item(13)
@@ -6080,9 +6039,7 @@ End Sub
 				IE10ToolStripMenuItem.Checked = False
 				IE10ToolStripMenuItem.Image = Nothing
 				IE11ToolStripMenuItem.Checked = False
-				IE11ToolStripMenuItem.Image = Nothing	
-				IE12ToolStripMenuItem.Checked = False
-				IE12ToolStripMenuItem.Image = Nothing				
+				IE11ToolStripMenuItem.Image = Nothing				
 			Else if ieMode = "IE9" Then
 				IE9ToolStripMenuItem.Checked = True
 				IE9ToolStripMenuItem.Image = imagelistsmallicons.Images.Item(13)
@@ -6093,9 +6050,7 @@ End Sub
 				IE10ToolStripMenuItem.Checked = False
 				IE10ToolStripMenuItem.Image = Nothing
 				IE11ToolStripMenuItem.Checked = False
-				IE11ToolStripMenuItem.Image = Nothing	
-				IE12ToolStripMenuItem.Checked = False
-				IE12ToolStripMenuItem.Image = Nothing				
+				IE11ToolStripMenuItem.Image = Nothing				
 			Else if ieMode = "IE10" Then
 				IE10ToolStripMenuItem.Checked = True
 				IE10ToolStripMenuItem.Image = imagelistsmallicons.Images.Item(13)
@@ -6106,9 +6061,7 @@ End Sub
 				IE9ToolStripMenuItem.Checked = False
 				IE9ToolStripMenuItem.Image = Nothing
 				IE11ToolStripMenuItem.Checked = False
-				IE11ToolStripMenuItem.Image = Nothing
-				IE12ToolStripMenuItem.Checked = False
-				IE12ToolStripMenuItem.Image = Nothing				
+				IE11ToolStripMenuItem.Image = Nothing				
 			Else if ieMode = "IE11" Then
 				IE11ToolStripMenuItem.Checked = True
 				IE11ToolStripMenuItem.Image = imagelistsmallicons.Images.Item(13)
@@ -6119,22 +6072,7 @@ End Sub
 				IE9ToolStripMenuItem.Checked = False
 				IE9ToolStripMenuItem.Image = Nothing
 				IE10ToolStripMenuItem.Checked = False
-				IE10ToolStripMenuItem.Image = Nothing
-				IE12ToolStripMenuItem.Checked = False
-				IE12ToolStripMenuItem.Image = Nothing				
-			Else if ieMode = "IE12" Then
-				IE12ToolStripMenuItem.Checked = True
-				IE12ToolStripMenuItem.Image = imagelistsmallicons.Images.Item(13)
-				IE7ToolStripMenuItem.Checked = False
-				IE7ToolStripMenuItem.Image = Nothing
-				IE8ToolStripMenuItem.Checked = False
-				IE8ToolStripMenuItem.Image = Nothing
-				IE9ToolStripMenuItem.Checked = False
-				IE9ToolStripMenuItem.Image = Nothing
-				IE10ToolStripMenuItem.Checked = False
-				IE10ToolStripMenuItem.Image = Nothing
-				IE11ToolStripMenuItem.Checked = False
-				IE11ToolStripMenuItem.Image = Nothing				
+				IE10ToolStripMenuItem.Image = Nothing	
 			End If
 
 		Catch e As Exception
